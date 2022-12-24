@@ -1,4 +1,4 @@
-# Ml_learning
+# Machine Learning Journey
 
 This repo outlines different projects throughout my journey learning about ML models 
 
