@@ -1,12 +1,25 @@
 import pickle
+import matplotlib.pyplot as plt
+from matplotlib import style
+import pandas as pd
 
+# Open Model
 pickle_student_model = open("student_grade_predictions", "rb")
 linear = pickle.load(pickle_student_model)
 
-print("\nFinal Accuracy: %.2f%%" % (100 * ACCURACY))
+# Reading data
+data = pd.read_csv("student-mat.csv", sep=";")
+data = data[["G1", "G2", "G3", "studytime", "failures", "absences"]]
 
-predictions = linear.predict(attributes_test)
+# Define styles and plots
+style.use("ggplot")
 
-# Printing predictions alongside the actual data
-for i in range(len(predictions)):
-    print(f"Prediction: {predictions[i]}, | Data: {attributes_test[i]} |  Actual Value:  {label_test[i]}")
+# Define predictors to find correlation
+predictor = "G1"
+prediction = "G3"
+
+plt.scatter(data[predictor], data[prediction])
+plt.xlabel("Grade 1")
+plt.ylabel("Final Grade")
+plt.title("Grade Prediction")
+plt.show()
