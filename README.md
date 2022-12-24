@@ -11,4 +11,3 @@ This repo outlines different projects throughout my journey learning about ML mo
 ### 🙍💁‍♂️ K Nearest Neighbor
 
 - Preprocessing irregular data into numerical data
-- Using KNN to predict outcome
