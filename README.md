@@ -4,4 +4,4 @@ This repo outlines different projects throughout my journey learning about ML mo
 
 ### 📈 Linear Regression 
 
-The first step was using linear regression to predict student grades
+- The first step was using linear regression to predict student grades using `sklearn` 
